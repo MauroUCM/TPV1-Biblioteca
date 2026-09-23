@@ -2,7 +2,7 @@
 #include <iostream>
 #include <windows.h>
 #include "checkML.h"
-//#include "ListaPrestamo.h"
+#include "ListaPrestamo.h"
 
 using namespace std;
 

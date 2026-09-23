@@ -12,7 +12,7 @@ public:
 	ListaPrestamo(istream& stream, const Catalogo& catalogo);
 	~ListaPrestamo();
 
-	friend ostream& operator<<(ostream& stream, const ListaPrestamo& lista);
+	friend ostream& operator<<(ostream&, const ListaPrestamo&);
 
 private:
 	const Catalogo& _catalogo;
