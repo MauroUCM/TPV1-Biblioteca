@@ -3,6 +3,7 @@
 #include <windows.h>
 #include "checkML.h"
 #include "ListaPrestamo.h"
+#include "Ejemplar.h"
 
 using namespace std;
 
@@ -14,7 +15,8 @@ int main()
 
     int num;
 
-    catalogoDoc >> num;
-    
-    cout << num;
+    Ejemplar ejemplar;
+    catalogoDoc >> num >> ejemplar;
+
+    return 0;
 }

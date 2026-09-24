@@ -14,7 +14,7 @@ class Ejemplar
 public:
 	Ejemplar();
 	~Ejemplar();
-
+	
 	friend istream& operator>>(istream&, Ejemplar&);
 private:
 	Tipo _tipo;
