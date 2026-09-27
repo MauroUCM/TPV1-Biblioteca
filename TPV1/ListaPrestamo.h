@@ -1,7 +1,6 @@
 #pragma once
 #include<fstream>
 #include <iostream>
-#include "Catalogo.h"
 #include "Prestamo.h"
 
 using namespace std;
@@ -12,12 +11,13 @@ public:
 	ListaPrestamo(istream& stream, const Catalogo& catalogo);
 	~ListaPrestamo();
 
-	friend ostream& operator<<(ostream&, const ListaPrestamo&);
+	void mostrar(ostream&);
 
 private:
 	const Catalogo& _catalogo;
+	Prestamo* _elems;
+	size_t _numElems;
 
-	void ordena();
-
+	void ordenar();
 };
 

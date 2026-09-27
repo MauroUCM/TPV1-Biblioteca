@@ -2,11 +2,11 @@
 #include <algorithm>
 
 Catalogo::Catalogo(istream& stream) {
-	stream >> _size;
+	stream >> _numElems;
 
-	_elems = new Ejemplar[_size];
+	_elems = new Ejemplar[_numElems];
 
-	for (int i = 0; i < _size; i++) {
+	for (int i = 0; i < _numElems; i++) {
 		stream >> _elems[i];
 	}
 }
@@ -16,7 +16,7 @@ Catalogo::~Catalogo() {
 }
 
 Ejemplar* Catalogo::buscarEjemplar(int id) const {
-	Ejemplar* candidato = std::lower_bound(_elems, _elems + _size, id, comparaCodigo);
+	Ejemplar* candidato = std::lower_bound(_elems, _elems + _numElems, id, comparaCodigo);
 
 	if (candidato->getCodigo() == id) {
 		return candidato;

@@ -12,7 +12,7 @@ public:
 
 private:
 	Ejemplar* _elems;
-	size_t _size;
+	size_t _numElems;
 
 	static bool comparaCodigo(const Ejemplar& ejemplar, int codigo);
 };

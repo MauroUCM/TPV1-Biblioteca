@@ -15,8 +15,6 @@ istream& operator>>(istream& stream, Ejemplar& ejemplar) {
 	stream >> aux;
 	getline(stream, ejemplar._titulo);
 
-
-
 	switch (aux) {
 	case 'A':
 		ejemplar._tipo = AUDIOVISUAL;
