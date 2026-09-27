@@ -1,4 +1,5 @@
 #include "Prestamo.h"
+#include <chrono>
 
 Prestamo::Prestamo() {
 
@@ -39,11 +40,10 @@ bool Prestamo::operator<(const Prestamo& prestamo) const {
 };
 
 ostream& operator<<(ostream& out, const Prestamo& d) {
-	int fechaDiff = d.getDevolucion().diff(d.getFecha());
+	int fechaDiff = d.getDevolucion().diff(Date());
 
 	out << d.getFecha() << " (en " << fechaDiff << " dias) " << d.getEjemplar()->getTitulo();
-
-	if (fechaDiff > 0) {
+	if (fechaDiff < 0) {
 		out << " (" << fechaDiff * 2 << " días de penalización)";
 	}
 
