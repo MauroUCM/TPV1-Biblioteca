@@ -43,7 +43,7 @@ ostream& operator<<(ostream& out, const Prestamo& d) {
 
 	out << d.getFecha() << " (en " << fechaDiff << " dias) " << d.getEjemplar()->getTitulo();
 
-	if (fechaDiff < 0) {
+	if (fechaDiff > 0) {
 		out << " (" << fechaDiff * 2 << " días de penalización)";
 	}
 
