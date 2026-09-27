@@ -3,7 +3,7 @@
 #include <windows.h>
 #include "checkML.h"
 #include "ListaPrestamo.h"
-#include "Ejemplar.h"
+#include "Catalogo.h"
 
 using namespace std;
 
@@ -13,10 +13,7 @@ int main()
 
     ifstream catalogoDoc("catalogo.txt");
 
-    int num;
-
-    Ejemplar ejemplar;
-    catalogoDoc >> num >> ejemplar;
+    Catalogo catalogo = Catalogo(catalogoDoc);
 
     return 0;
 }
